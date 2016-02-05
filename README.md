@@ -1,0 +1,2 @@
+# yopmail-reader
+SimpleYopmail
