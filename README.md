@@ -2,7 +2,7 @@
 #### What is Yopmail?
 [YOPmail] *(Your Own Protection mail)* is a temporary e-mail service. They keep a message up for 8 days. [YOPmail wikia.com]
 #### Who is going to use this tool?
-This Tool was made for people who wants to automate certain task involving email reception. 
+This tool was made for people who wants to automate certain task involving email reception. 
 I were looking for a similar tool like this but was not lucky. So i am sharing my yopmail reader for the comunity.
 #### What does this tool?
   - List first incoming emails
