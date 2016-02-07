@@ -1,7 +1,7 @@
 # Java Yopmail Reader
 #### What is Yopmail?
 [YOPmail] *(Your Own Protection mail)* is a temporary e-mail service. They keep a message up for 8 days. [YOPmail wikia.com]
-#### Whos is going to use this tool?
+#### Who is going to use this tool?
 This Tool was made for people who wants to automate certain task involving email receptions. 
 I were looking for a tool similar like this but was not lucky. So i am sharing my yopmail reader for the comunity.
 #### What does this tool?
