@@ -1,13 +1,13 @@
 # Java Yopmail Reader
 #### What is Yopmail?
-[YOPmail] *(Your Own Protection mail)* is a temporary e-mail service. They keep a message up for 8 days. [YOPmail wikia.com]
+[Yopmail][YOPmail] *(Your Own Protection mail)* is a temporary e-mail service. They keep a message up for 8 days. [From wikia.com][YOPmail wikia.com]
 #### Who is going to use this tool?
 This tool was made for people who wants to automate certain task involving email reception. 
 I were looking for a similar tool like this but was not lucky. So i am sharing my yopmail reader for the comunity.
 #### What does this tool?
   - List first incoming emails
   - List incoming emails from a specific page
-  - Get the content of a specific email received *(from one element of above list)* 
+  - Get the content of a specific email received *(from one mail in above list)* 
   - Get the content of the last email received
   
 #### How to use this tool?
@@ -59,7 +59,7 @@ public class Example {
 }
 ```
 ### Actual tool version
-0.0.1
+0.0.1-SNAPSHOT
 ### BE CAREFUL!!!
 During the testing phase, they blocked me from accessing to the YopMail web, now all time i am trying to enter its site i have got a 403 error. You know, a stress test can make yopmail to understand you are trying to attack its site. So, use this tool with head before getting your ip banned.
 
@@ -70,7 +70,7 @@ Another thing to know is the probability to request mail content and get an IOEx
  - Send mails to another yopmails accounts
  - Analyze a way to avoid captchas requests
  - Improve the times of dom navigation
- - Push to maven repo?
+ - Push to maven repo
 
 ### Development
 Want to contribute? Great!
