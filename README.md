@@ -2,8 +2,8 @@
 #### What is Yopmail?
 [YOPmail] *(Your Own Protection mail)* is a temporary e-mail service. They keep a message up for 8 days. [YOPmail wikia.com]
 #### Who is going to use this tool?
-This Tool was made for people who wants to automate certain task involving email receptions. 
-I were looking for a tool similar like this but was not lucky. So i am sharing my yopmail reader for the comunity.
+This Tool was made for people who wants to automate certain task involving email reception. 
+I were looking for a similar tool like this but was not lucky. So i am sharing my yopmail reader for the comunity.
 #### What does this tool?
   - List first incoming emails
   - List incoming emails from a specific page
@@ -63,12 +63,12 @@ public class Example {
 ### BE CAREFUL!!!
 During the testing phase, they blocked me from accessing to the YopMail web, now all time i am trying to enter its site i have got a 403 error. You know, a stress test can make yopmail to understand you are trying to attack its site. So, use this tool with head before getting your ip banned.
 
-Another thing to know is the probability to request mail content and get an IOException. This could be because sometimes, randomly, yopmail requests you to resolve a captcha. 
+Another thing to know is the probability to request mail content and get an IOException. This could be because sometimes, randomly, yopmail request you to resolve a captcha. 
 
 ### Next Steps
  - Get the date and time of a received mail
  - Send mails to another yopmails accounts
- - We can analyze the way to avoid captchas requests
+ - Analyze a way to avoid captchas requests
  - Improve the times of dom navigation
  - Push to maven repo?
 
