@@ -68,8 +68,8 @@ Another things to know is the probability to request mail content and get an IOE
 ### Next Steps
  - Get the date and time of a received mail
  - Send mails to another yopmails accounts
- - We can analyze the way to avoid captchas requests. 
- - Improve the times of dom navigation.
+ - We can analyze the way to avoid captchas requests
+ - Improve the times of dom navigation
  - Push to maven repo?
 
 ### Development
