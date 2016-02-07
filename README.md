@@ -61,7 +61,7 @@ public class Example {
 ### Actual tool version
 0.0.1
 ### BE CAREFUL!!!
-During the testing phase, they blocked me from accessing to the YopMail web, now all time i am trying to enter its site i have got a 403 error. You know, a stress test can make yopmail to understand i am trying to attack its site. So, use this tool with head before getting your ip banned.
+During the testing phase, they blocked me from accessing to the YopMail web, now all time i am trying to enter its site i have got a 403 error. You know, a stress test can make yopmail to understand you are trying to attack its site. So, use this tool with head before getting your ip banned.
 
 Another things to know is the probability to request mail content and get an IOException. These could be because sometimes, randomly, yopmail requests you to resolve a captcha. 
 
