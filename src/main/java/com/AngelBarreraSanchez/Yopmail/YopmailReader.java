@@ -16,14 +16,32 @@ import com.AngelBarreraSanchez.Yopmail.Domain.Mail;
 /**
  * YopmailReader 
  * @author Angel Barrera Sanchez
- * Simple tool
+ * Simple yopmail reader tool
  */
 public class YopmailReader {
 	
 	/** BASE MOBILE YOPMAIL URL */
-	private static final String YOPMAIL_BASE_URL = "http://m.yopmail.com/en/";
+	private final String YOPMAIL_BASE_URL = "http://m.yopmail.com/en/";
+	
 	/** MOBILE USER AGENT */
-	private static final String MOBILE_USER_AGENT = "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4";
+	private final String MOBILE_USER_AGENT = "Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4";
+	
+	/** Singleton Instance */
+	private static YopmailReader instance;
+	
+	/** Private Constructor, avoid instance outside this class */
+	private YopmailReader(){}
+	
+	/**
+	 * Gets an instance of the YopmailReader
+	 * @return a YopmailReader instance
+	 */
+	public static YopmailReader getInstance(){
+		if(instance==null){
+			instance = new YopmailReader();
+		}
+		return instance;
+	}
 	
 	/**
 	 * Returns a list of max 15 mail object
@@ -32,7 +50,7 @@ public class YopmailReader {
 	 * @return the mail list
 	 * @throws IOException
 	 */
-	public static List<Mail> getIncomingMailList(final String yopmailUserName, final int page) throws IOException{
+	public List<Mail> getIncomingMailList(final String yopmailUserName, final int page) throws IOException{
 		Response res = Jsoup.connect(new StringBuffer().append(YOPMAIL_BASE_URL).append("inbox.php?login=").append(yopmailUserName.toLowerCase().replaceAll("@yopmail.com", "")).append("&p=").append(page<=0?1:page).append("&d=&ctrl=&scrl=&spam=true&yf=HZwD0ZGH5AwLlAGpjBGt0Aj&yp=YZGD0BQt3AGLjBGL4ZmNkBN&yj=RZGHjZmLlAwNkAmtmZGV4BN&v=2.6&r_c=&id=").toString())
 				.userAgent(MOBILE_USER_AGENT)
 				.method(Method.GET)
@@ -58,7 +76,7 @@ public class YopmailReader {
 	 * @return the mail list
 	 * @throws IOException
 	 */
-	public static List<Mail> getIncomingMailList(final String yopmailUserName) throws IOException{
+	public List<Mail> getIncomingMailList(final String yopmailUserName) throws IOException{
 		return getIncomingMailList(yopmailUserName, 1);
 	}
 	
@@ -68,7 +86,7 @@ public class YopmailReader {
 	 * @return plain content of the email
 	 * @throws IOException
 	 */
-	public static String getMailContent(final Mail mail) throws IOException{
+	public String getMailContent(final Mail mail) throws IOException{
 		Response res = Jsoup.connect(new StringBuffer().append(YOPMAIL_BASE_URL).append(mail.getUrl()).toString())
 				.userAgent(MOBILE_USER_AGENT)
 				.method(Method.GET)
@@ -83,7 +101,7 @@ public class YopmailReader {
 	 * @return plain content of the email
 	 * @throws IOException
 	 */
-	public static String getLastMailContent(final String yopmailUserName) throws IOException{
+	public String getLastMailContent(final String yopmailUserName) throws IOException{
 		Response res = Jsoup.connect(new StringBuffer().append(YOPMAIL_BASE_URL).append("inbox.php?login=").append(yopmailUserName.toLowerCase().replaceAll("@yopmail.com", "")).append("&p=1").append("&d=&ctrl=&scrl=&spam=true&yf=HZwD0ZGH5AwLlAGpjBGt0Aj&yp=YZGD0BQt3AGLjBGL4ZmNkBN&yj=RZGHjZmLlAwNkAmtmZGV4BN&v=2.6&r_c=&id=").toString())
 				.userAgent(MOBILE_USER_AGENT)
 				.method(Method.GET)
